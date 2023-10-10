@@ -1,0 +1,220 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: Roboto, sans-serif;
+}
+
+header {
+    padding: 40px;
+    background-color: 	#FA8072;
+}
+
+h1 {
+    margin-left: 165px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container .menu ul {
+    list-style: none;
+    padding: 0; /* Remova o preenchimento padrão da lista */
+    display: flex; /* Use flex para alinhar os itens da lista horizontalmente */
+}
+
+.container .menu ul li {
+    margin-right: 10px; /* Adicione margem direita para espaçamento entre os itens */
+}
+
+.container .menu ul li a {
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+}
+
+.conteudo {
+    display: flex;
+    margin: 80px;
+}
+
+.sobre {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.imagem-loja img {
+    max-width: 100%;
+    width: 800px; /* Ajuste a largura da imagem conforme necessário */
+    height: auto;
+    margin-right: 10px; /* Adicione margem à direita para espaçamento entre a imagem e o título */
+}
+
+.descricao {
+    display: flex;
+    flex-direction: column; /* Empilhe os elementos verticalmente */
+    align-items: center; /* Centralize verticalmente */
+}
+
+.descricao h2 {
+    text-align: justify;
+    margin-bottom: 10px; /* Adicione margem inferior para espaçamento entre o título e o parágrafo */
+    border-bottom: 5px solid 	#FA8072;
+}
+
+.descricao p {
+    text-align: justify; /* Alinhe o texto centralmente */
+}
+
+.produtos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Quatro colunas de tamanho igual */
+    gap: 20px; /* Espaçamento entre as células do grid */
+    text-align: center; /* Alinha o texto centralmente */
+    margin: 40px 80px;
+}
+
+.produtos_img {
+    border: 1px solid #ccc; /* Borda para cada item */
+    padding: 10px; /* Espaçamento interno */
+    display: flex;
+    flex-direction: column; /* Coluna para alinhar a imagem e o título verticalmente */
+    align-items: center; /* Centralize verticalmente */
+}
+
+.produtos_img img {
+    max-width: 100%; /* Largura máxima para as imagens */
+    height: auto; /* Mantém a proporção de aspecto original */
+}
+
+.produtos h2 {
+    margin-top: 10px; /* Adicione margem superior para espaçamento entre o título e a imagem */
+    grid-column: span 4; /* Expande o título para ocupar as quatro colunas */
+    text-align: left;
+    border-bottom: 5px solid 	#FA8072;
+}
+
+.botao {
+    cursor: pointer;
+    margin: 10px;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+
+
+@media screen and (max-width: 667px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    header {
+        padding: 20px; /* Reduz o preenchimento para telas menores */
+    }
+
+    h1 {
+        margin-left: 20px; /* Alinha o título à esquerda para telas menores */
+    }
+
+    .container {
+        flex-direction: column; /* Empilha os elementos verticalmente */
+        align-items: flex-start; /* Alinha à esquerda */
+    }
+
+    .container .menu ul {
+        flex-direction: column; /* Empilha os itens do menu verticalmente */
+    }
+
+    .container .menu ul li {
+        margin-right: 0; /* Remove a margem direita entre os itens do menu */
+        margin-bottom: 10px; /* Adiciona margem inferior entre os itens do menu */
+    }
+
+    .conteudo {
+        margin: 20px;
+    }
+
+    .imagem-loja img {
+        width: 100%; /* Ajusta a largura da imagem para preencher a largura da tela */
+        margin-right: 0; /* Remove a margem direita da imagem */
+    }
+
+    .descricao h2 {
+        text-align: left; /* Alinha o título à esquerda */
+    }
+
+    .produtos {
+        grid-template-columns: repeat(2, 1fr); /* Duas colunas em telas menores */
+        gap: 10px; /* Reduz o espaçamento entre as células do grid */
+        margin: 20px;
+    }
+}
+
+
+@media screen and (min-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    header {
+        padding: 30px; /* Reduz o preenchimento para telas de tablet */
+    }
+
+    h1 {
+        margin-left: 100px; /* Ajusta o posicionamento do título para tablet */
+    }
+
+    .container .menu ul li a {
+        font-size: 18px; /* Reduz o tamanho da fonte para tablet */
+    }
+
+    .conteudo {
+        margin: 60px; /* Ajusta a margem para tablet */
+    }
+
+    .imagem-loja img {
+        width: 600px; /* Reduz a largura da imagem para tablet */
+    }
+
+    .produtos {
+        grid-template-columns: repeat(3, 1fr); /* Três colunas em tablet */
+        gap: 15px; /* Reduz o espaçamento entre as células do grid */
+        margin: 30px 60px; /* Ajusta a margem para tablet */
+    }
+}
+
+/* Media query para PCs (1024px de largura) e dispositivos maiores */
+@media screen and (min-width: 1024px) {
+    header {
+        padding: 40px; /* Volta o preenchimento original para PCs */
+    }
+
+    h1 {
+        margin-left: 165px; /* Volta o posicionamento original do título */
+    }
+
+    .container .menu ul li a {
+        font-size: 20px; /* Volta o tamanho original da fonte */
+    }
+
+    .conteudo {
+        margin: 80px; /* Volta a margem original */
+    }
+
+    .imagem-loja img {
+        width: 800px; /* Volta a largura original da imagem */
+    }
+
+    .produtos {
+        grid-template-columns: repeat(4, 1fr); /* Volta para quatro colunas em PCs */
+        gap: 20px; /* Volta o espaçamento original entre as células do grid */
+        margin: 40px 80px; /* Volta a margem original */
+    }
+}
+
+
+
