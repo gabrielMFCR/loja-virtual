@@ -212,7 +212,6 @@ h1 {
     }
 
     .produtos {
-        display: block;
         grid-template-columns: repeat(4, 1fr); /* Volta para quatro colunas em PCs */
         gap: 20px; /* Volta o espaçamento original entre as células do grid */
         margin: 40px 80px; /* Volta a margem original */
