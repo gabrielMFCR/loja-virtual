@@ -148,6 +148,7 @@ h1 {
     }
 
     .produtos {
+        display: block;
         grid-template-columns: repeat(2, 1fr); /* Duas colunas em telas menores */
         gap: 10px; /* Reduz o espaçamento entre as células do grid */
         margin: 20px;
@@ -181,6 +182,7 @@ h1 {
     }
 
     .produtos {
+        display:block
         grid-template-columns: repeat(3, 1fr); /* Três colunas em tablet */
         gap: 15px; /* Reduz o espaçamento entre as células do grid */
         margin: 30px 60px; /* Ajusta a margem para tablet */
@@ -210,6 +212,7 @@ h1 {
     }
 
     .produtos {
+        display: block;
         grid-template-columns: repeat(4, 1fr); /* Volta para quatro colunas em PCs */
         gap: 20px; /* Volta o espaçamento original entre as células do grid */
         margin: 40px 80px; /* Volta a margem original */
